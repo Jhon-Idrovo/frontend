@@ -1,0 +1,1 @@
+web: python manage.py runserver --settings main_app.settings_local 0.0.0.0:8000

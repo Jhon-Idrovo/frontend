@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const baseURL = "http://127.0.0.1:8000/";
-//const baseURL = "https://your-home-finance.herokuapp.com/";
+//const baseURL = "http://127.0.0.1:8000/";
+const baseURL = "https://your-home-finance.herokuapp-api.com/";
 
 const axiosInstance = axios.create({
   baseURL: baseURL,
@@ -11,7 +11,7 @@ const axiosInstance = axios.create({
       ? "JWT " + localStorage.getItem("access_token")
       : null,
     "Content-Type": "application/json",
-    accept: "application/json",
+    Accept: "application/json",
   },
 });
 

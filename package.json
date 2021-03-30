@@ -19,8 +19,7 @@
   "scripts": {
     "build": "webpack --config config/webpack.prod.js",
     "build-local": "webpack --config config/webpack.dev.js",
-    "start": "webpack serve --config config/webpack.dev.js",
-    "postinstall": "npm build"
+    "start": "webpack serve --config config/webpack.dev.js"
   },
   "browserslist": {
     "production": [

@@ -4,14 +4,16 @@ import {
   BrowserRouter as Router,
   Switch,
   NavLink,
+  useHistory,
 } from "react-router-dom";
 import Register from "./components/Register";
 import ExpensesList from "./components/ExpensesList";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Logout from "./components/Logout";
 import Login from "./components/Login";
 import CreateExp from "./components/CreateExp";
 import Statistics from "./components/Statistics";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 function App() {
   const [isLoged, setIsLoged] = useState(
@@ -27,7 +29,7 @@ function App() {
             <li className="list-item">
               {!isLoged ? (
                 <NavLink
-                  to="/login"
+                  to="/login/"
                   className="upper-btn"
                   activeClassName="upper-active"
                 >
@@ -85,6 +87,12 @@ function App() {
         <Route path="/logout">
           <Logout setIsLoged={setIsLoged} />
         </Route>
+        <Route
+          path="/"
+          render={({ history }) => {
+            history.push("/login");
+          }}
+        />
       </Switch>
     </Router>
   );

@@ -118,6 +118,7 @@ See https://help.github.com/articles/ignoring-files/ for more about ignoring fil
 /build
 /main_app/settings.py
 /main_app.settings
+dist
 # misc
 .DS_Store
 .env.local

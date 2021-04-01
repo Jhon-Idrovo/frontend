@@ -19,7 +19,8 @@
     "web-vitals": "^1.1.1"
   },
   "scripts": {
-    "build": "webpack --config config/webpack.prod.js"
+    "build": "webpack --config config/webpack.prod.js",
+    "start": "node server/server.js"
   },
   "browserslist": {
     "production": [
